@@ -1,5 +1,8 @@
 # Ensure this is set to the path to the Env git package you checked out
-export ZSH_ENV='/Users/dlouw/.env/Env'
+if [[ -z "$ZSH_ENV" ]]
+then
+   export ZSH_ENV='/Users/dlouw/.env/Env'
+fi
 
 # A nice prompt
 PS1='[%T] %n@%m:%~# '

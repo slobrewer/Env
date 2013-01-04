@@ -1,0 +1,49 @@
+# This gives you more extensive tab completion.
+autoload -U compinit
+compinit
+
+# Tab completion from both ends.
+setopt completeinword
+
+# Tab completion should be case-insensitive.
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Better completion for killall.
+zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+
+# Colors for ls.
+export CLICOLORS=1
+if [[ -x "`whence -p dircolors`" ]]; then
+  eval `dircolors`
+  alias ls='ls -F --color=auto'
+else
+  alias ls='ls -FG'
+fi
+
+# Shortcuts for ls
+alias ll='ls -l'
+alias la='ls -a'
+
+# One history for all open shells; store 10,000 entires. This makes this into a
+# useful memory aid to find the commands you used last time for ./configure
+# etc. Use Alt-P (find command that starts like this) and ^R (search in
+# history) liberally.
+HISTFILE=~/.zhistory
+HISTSIZE=SAVEHIST=10000
+export HISTSIZE
+setopt incappendhistory 
+setopt sharehistory
+setopt extendedhistory
+
+# superglobs
+setopt extendedglob
+unsetopt caseglob
+
+# This is useful to remember command in your history without executing them.
+setopt interactivecomments
+
+# Display CPU usage stats for commands taking more than 10 seconds
+export REPORTTIME=10
+
+# VIM key bindings
+bindkey -v

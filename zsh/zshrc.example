@@ -1,0 +1,15 @@
+# Ensure this is set to the path to the Env git package you checked out
+export ZSH_ENV='/Users/dlouw/.env/Env'
+
+# A nice prompt
+PS1='[%T] %n@%m:%~# '
+
+export EDITOR='subl -w'
+export MOUNT_POINT="/Volumes/Unix/"
+
+source $ZSH_ENV/zsh/zshrc/basics
+source $ZSH_ENV/zsh/zshrc/git_prompt
+source $ZSH_ENV/zsh/zshrc/amazon_dev
+
+# Ensure that our override scripts are first in the path
+export PATH="$HOME/bin:$PATH"

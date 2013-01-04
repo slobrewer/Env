@@ -1,0 +1,21 @@
+#!/bin/sh
+# A script to toggle the Terminal.app colors when ssh-ing from a Mac
+
+HOSTNAME=`echo $@ | sed s/.*@//`
+
+set_bg () {
+  osascript -e "tell application \"Terminal\" to set current settings of first window to settings set named $1"
+}
+
+on_exit () {
+  set_bg "\"IR_Black\""
+}
+trap on_exit EXIT
+
+case $HOSTNAME in
+  *dev*) set_bg "\"IR_Blue\"" ;;
+  *integ*) set_bg "\"IR_Green\"" ;;
+  *) set_bg "\"IR_Black\"" ;;
+esac
+
+/usr/bin/ssh "$@"

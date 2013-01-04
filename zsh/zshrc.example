@@ -8,6 +8,7 @@ export EDITOR='subl -w'
 export MOUNT_POINT="/Volumes/Unix/"
 
 source $ZSH_ENV/zsh/zshrc/basics
+source $ZSH_ENV/zsh/zshrc/color_host_prompt
 source $ZSH_ENV/zsh/zshrc/git_prompt
 source $ZSH_ENV/zsh/zshrc/amazon_dev
 

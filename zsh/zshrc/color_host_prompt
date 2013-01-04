@@ -1,0 +1,26 @@
+# Set the colors and short host name based on host name
+# Allowed colors include black, red, green, yellow, blue, magenta, cyan,
+# white, and default
+case "$HOST" in
+   d49a20b8ca1c.ant.amazon.com)
+      SHORT_HOST=MAC
+      PROMPT_FG_COLOR=yellow
+      PROMPT_BG_COLOR=default
+      ;;
+   dlouw.desktop.amazon.com)
+      SHORT_HOST=DEV
+      PROMPT_FG_COLOR=blue
+      PROMPT_BG_COLOR=default
+      ;;
+   *)
+      SHORT_HOST=`hostname -s`
+      PROMPT_FG_COLOR=default
+      PROMPT_BG_COLOR=default
+      ;;
+esac
+
+# Basic prompt
+export PROMPT="[%T $SHORT_HOST:%c]%# "
+
+# Construct the prompt with colors
+export PROMPT="%F{$PROMPT_FG_COLOR}%K{$PROMPT_BG_COLOR}$PROMPT%f%k"

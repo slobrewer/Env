@@ -34,6 +34,7 @@ export HISTSIZE
 setopt incappendhistory 
 setopt sharehistory
 setopt extendedhistory
+setopt histignoredups
 
 # superglobs
 setopt extendedglob

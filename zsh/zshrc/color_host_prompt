@@ -17,6 +17,11 @@ case "$HOST" in
       PROMPT_FG_COLOR=red
       PROMPT_BG_COLOR=default
       ;;
+   Weizen.local)
+      SHORT_HOST=weizen
+      PROMPT_FG_COLOR=green
+      PROMPT_BG_COLOR=default
+      ;;
    *)
       SHORT_HOST=`hostname -s`
       PROMPT_FG_COLOR=default

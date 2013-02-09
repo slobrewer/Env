@@ -2,7 +2,7 @@
 # Allowed colors include black, red, green, yellow, blue, magenta, cyan,
 # white, and default
 case "$HOST" in
-   d49a20b8ca1c.ant.amazon.com)
+   (d49a20b8ca1c|14109fe5a58b).ant.amazon.com)
       SHORT_HOST=MAC
       PROMPT_FG_COLOR=yellow
       PROMPT_BG_COLOR=default

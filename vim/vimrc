@@ -39,5 +39,5 @@
 
 " VIM Color options
    set background=dark 
-   colorscheme ir_black 
+   colorscheme solarized 
    syntax on

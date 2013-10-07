@@ -1,0 +1,8 @@
+gitr () {
+    find -follow -name .git -type d | sort |
+    while read line; do
+        directory=`dirname $line`;
+        echo "$directory$";
+        (cd $directory && git "$@");
+    done
+}

@@ -17,3 +17,6 @@ source $ZSH_ENV/zsh/zshrc/amazon_dev
 
 # Ensure that our override scripts are first in the path
 export PATH="$HOME/bin:$PATH"
+
+# aliases
+alias ll='ls -al'

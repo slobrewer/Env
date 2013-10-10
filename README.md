@@ -5,6 +5,7 @@ To install this environment on your machine do the following:
         * Ensure ZSH_ENV points to the full path to this Git package
             * You can do this by setting ZSH_ENV in your .zshenv file
         * Edit your ~/.zshrc to include whichever scripts you want
+    * Symbolic link Env/zsh to ~/.zsh
 * Scripts
     * Create a ~/bin directory and symbolic whichever Env/bin scripts you want there.  If you want all of them then just add the path to Env/bin to the front of your path
 * VIM

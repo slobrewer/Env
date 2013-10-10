@@ -1,7 +1,7 @@
 # Ensure this is set to the path to the Env git package you checked out
 if [[ -z "$ZSH_ENV" ]]
 then
-   export ZSH_ENV='/Users/dlouw/.env/Env'
+   export ZSH_ENV="$HOME/.env/Env"
 fi
 
 # A nice prompt

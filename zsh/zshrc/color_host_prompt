@@ -22,6 +22,11 @@ case "$HOST" in
       PROMPT_FG_COLOR=green
       PROMPT_BG_COLOR=default
       ;;
+   ub4b52fcef9c050a54d23)
+      SHORT_HOST=dlouw-ubuntu
+      PROMPT_FG_COLOR=cyan
+      PROMPT_BG_COLOR=default
+      ;;
    *)
       SHORT_HOST=`hostname -s`
       PROMPT_FG_COLOR=default

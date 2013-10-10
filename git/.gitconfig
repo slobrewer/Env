@@ -1,6 +1,3 @@
-# Aliases for common git commands. E.g., enter "git d" for "git diff"
-# These settings live in the ~/.gitconfig file.
- 
 [alias]
     a = add
     b = branch
@@ -25,3 +22,8 @@
     sra = svn rebase --all
     sh = !git-sh
     st = status
+    dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset)         %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+[color]
+    ui = auto
+[branch]
+    autosetupmerge = always

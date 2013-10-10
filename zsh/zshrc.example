@@ -23,3 +23,5 @@ alias ll='ls -al'
 
 autoload colros
 colors
+
+eval `dircolors $ZSH_ENV/zsh/dircolors.ansi-dark`

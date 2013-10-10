@@ -20,3 +20,6 @@ export PATH="$HOME/bin:$PATH"
 
 # aliases
 alias ll='ls -al'
+
+autoload colros
+colors

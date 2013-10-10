@@ -5,7 +5,7 @@ To install this environment on your machine do the following:
     * Create ~/.zshenv and edit it
         * Set the path to this package with export ZSH_ENV="$HOME/.env/Env"
     * Create ~/.zshrc and edit it
-        * Run the example zshrc by adding the following line source /home/dlouw/.env/Env/zsh/zshrc.example
+        * Run the example zshrc by adding the following line source $HOME/.env/Env/zsh/zshrc.example
         * Edit your ~/.zshrc to include whichever scripts you want
     * Symbolic link Env/zsh to ~/.zsh
 * Scripts
@@ -15,3 +15,4 @@ To install this environment on your machine do the following:
     * Symbolic link ~/.vim/vimrc to ~/.vimrc
 * Git
     * Edit your .gitconfig file in your home directory.  Add a [include] section and add an entry in that section that is path = .env/Env/git/.gitconfig
+    * You need to be running at least git version 1.7.10 for this to work. Otherwise copy and paste it into your .gitconfig

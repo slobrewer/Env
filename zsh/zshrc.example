@@ -21,7 +21,12 @@ export PATH="$HOME/bin:$PATH"
 # aliases
 alias ll='ls -al'
 
-autoload colros
+autoload colors
 colors
 
-eval `dircolors $ZSH_ENV/zsh/dircolors.ansi-dark`
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  eval `dircolors $ZSH_ENV/zsh/dircolors.ansi-dark`
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  export CLICOLOR=1
+  export LSCOLORS=GxFxCxDxBxegedabagaced
+fi

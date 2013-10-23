@@ -34,18 +34,15 @@ case "$HOST" in
       ;;
 esac
 
-# update the agnoster theme colors if in use otherwise set the prompt
-whence -f prompt_context > /dev/null
+# update the powerline theme colors if in use otherwise set the prompt
+whence -f powerline_prompt > /dev/null
 
 if [[ $? -eq 0 ]]
 then
-    prompt_context() {
-        local user=`whoami`
-
-        if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-            prompt_segment $PROMPT_FG_COLOR black "%(!.%{%F{yellow}%}.)$user@%m"
-        fi
-    }
+    export POWERLINE_SEC1_BG=%K{$PROMPT_FG_COLOR}
+    export POWERLINE_SEC1_FG=%F{$PROMPT_BG_COLOR}
+    export POWERLINE_USER_NAME=%n@$SHORT_HOST
+    powerline_prompt
 else
     # Construct the prompt with colors
     export PROMPT="%F{$PROMPT_FG_COLOR}%K{$PROMPT_BG_COLOR}$PROMPT%f%k"

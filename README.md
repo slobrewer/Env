@@ -9,8 +9,9 @@ To install this environment on your machine do the following:
         * More info at https://github.com/robbyrussell/oh-my-zsh
         * enable plugins by editing ~/.zshrc and setting the plugins= value
             * suggested plugins=(git jump)
-        * set the ZSH_THEME in ~/.zshrc to agnoster
+        * set the ZSH_THEME in ~/.zshrc to powerline
             * follow the instructions on your local machine to install the powerline patched font.  Use the one from https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata
+            * install the forked theme from https://github.com/slobrewer/oh-my-zsh-powerline-theme
     * Copy Env/zsh/zshrc.example to ~/.zshrc and edit it
         * Ensure ZSH_ENV points to the full path to this Git package
             * You can do this by setting ZSH_ENV in your .zshenv file

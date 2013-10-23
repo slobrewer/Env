@@ -34,8 +34,20 @@ case "$HOST" in
       ;;
 esac
 
-# Basic prompt
-export PROMPT="[%T $SHORT_HOST:%c]%# "
+# update the agnoster theme colors if in use otherwise set the prompt
+whence -f prompt_context > /dev/null
 
-# Construct the prompt with colors
-export PROMPT="%F{$PROMPT_FG_COLOR}%K{$PROMPT_BG_COLOR}$PROMPT%f%k"
+if [[ $? -eq 0 ]]
+then
+    prompt_context() {
+        local user=`whoami`
+
+        if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+            prompt_segment $PROMPT_FG_COLOR black "%(!.%{%F{yellow}%}.)$user@%m"
+        fi
+    }
+else
+    # Construct the prompt with colors
+    export PROMPT="%F{$PROMPT_FG_COLOR}%K{$PROMPT_BG_COLOR}$PROMPT%f%k"
+fi
+

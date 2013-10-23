@@ -8,6 +8,14 @@ setopt completeinword
 # Tab completion should be case-insensitive.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+# Tab completion for jump
+function _completemarks {
+      reply=($(ls $MARKPATH))
+}
+
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
+
 # Better completion for killall.
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 

@@ -4,15 +4,8 @@ then
    export ZSH_ENV="$HOME/.env/Env"
 fi
 
-# A nice prompt
-PS1='[%T] %n@%m:%~# '
-
-export EDITOR='subl -w'
-export MOUNT_POINT="/Volumes/Unix/"
-
 source $ZSH_ENV/zsh/zshrc/basics
 source $ZSH_ENV/zsh/zshrc/color_host_prompt
-source $ZSH_ENV/zsh/zshrc/git_prompt
 source $ZSH_ENV/zsh/zshrc/amazon_dev
 
 # Ensure that our override scripts are first in the path

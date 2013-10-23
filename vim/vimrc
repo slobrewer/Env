@@ -44,3 +44,11 @@ filetype plugin indent on " Enable VIM indenting for XML
 
 " Spell checking
 autocmd BufNewFile,BufRead *.git/COMMIT_EDITMSG set spell
+"
+" VIM Color options
+   set background=dark 
+   colorscheme ir_black 
+   syntax on
+
+" Powerline
+    set rtp+=~/.env/Powerline/powerline/bindings/vim

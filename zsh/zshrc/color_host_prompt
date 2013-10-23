@@ -9,7 +9,7 @@ case "$HOST" in
       ;;
    dlouw.desktop.amazon.com)
       SHORT_HOST=DEV
-      PROMPT_FG_COLOR=blue
+      PROMPT_FG_COLOR=cyan
       PROMPT_BG_COLOR=default
       ;;
    raspberrypi1)
@@ -24,7 +24,7 @@ case "$HOST" in
       ;;
    ub4b52fcef9c050a54d23)
       SHORT_HOST=dlouw-ubuntu
-      PROMPT_FG_COLOR=cyan
+      PROMPT_FG_COLOR=blue
       PROMPT_BG_COLOR=default
       ;;
    *)

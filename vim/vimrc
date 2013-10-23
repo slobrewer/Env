@@ -51,4 +51,4 @@ autocmd BufNewFile,BufRead *.git/COMMIT_EDITMSG set spell
    syntax on
 
 " Powerline
-    set rtp+=~/.env/Powerline/powerline/bindings/vim
+    set rtp+=~/.env/powerline/powerline/bindings/vim
